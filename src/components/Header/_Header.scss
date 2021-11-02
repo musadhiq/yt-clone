@@ -1,0 +1,65 @@
+.header-nav {
+  min-height: 9vh;
+  width: 100%;
+  background-color: $primary-color;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5e5e5;
+  color: #fff;
+  .icon {
+    color: #fff;
+    cursor: pointer;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    .menu {
+      display: flex;
+      gap: 10px;
+      .yt-logo {
+        display: flex;
+        gap: 5px;
+        align-items: stretch;
+        .yt-icon {
+          background: rgb(255, 255, 255);
+          background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 1) 20%,
+            rgba(255, 248, 250, 0) 24%
+          );
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .search {
+      display: flex;
+      input {
+        width: 30rem;
+        padding: 10px;
+        background-color: $black;
+        border: 1px solid #e5e5e563;
+        border-right: none;
+        color: #e5e5e5;
+        letter-spacing: 0.8px;
+        font-weight: 500;
+        font-size: 1rem;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        background-color: $dark-faded;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .actions {
+      display: flex;
+      gap: 25px;
+    }
+  }
+}

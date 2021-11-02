@@ -1,0 +1,38 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 80%;
+}
+
+.yt-clone .layout {
+  display: grid;
+  grid-template-areas: "header header header header header header" "sidebar  container container container container container";
+}
+.yt-clone .layout .header {
+  grid-area: header;
+  height: 10vh;
+}
+.yt-clone .layout .sidebar {
+  grid-area: sidebar;
+  background-color: yellow;
+}
+.yt-clone .layout .container {
+  grid-area: container;
+}
+
+.header-nav header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav header .menu {
+  display: flex;
+}
+.header-nav header .actions {
+  display: flex;
+}

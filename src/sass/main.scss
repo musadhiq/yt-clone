@@ -1,0 +1,35 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+@import "./var";
+
+body {
+  font-family: $font-sans;
+  font-size: 80%;
+}
+
+.yt-clone {
+  .layout {
+    display: grid;
+    grid-template-areas:
+      "header header header header header header"
+      "sidebar  container container container container container";
+    .header {
+      grid-area: header;
+      height: 10vh;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background-color: yellow;
+    }
+    .container {
+      grid-area: container;
+    }
+  }
+}
+
+@import "../components/Header/Header";
+@import "../components/Sidebar/sidebar";
+@import "../pages/Home/home";

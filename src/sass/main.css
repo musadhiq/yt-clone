@@ -1,0 +1,129 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 80%;
+}
+
+.yt-clone .layout {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header header header header" "sidebar  container container container container container";
+}
+
+.yt-clone .layout .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: header;
+  height: 10vh;
+}
+
+.yt-clone .layout .sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+  background-color: yellow;
+}
+
+.yt-clone .layout .container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: container;
+}
+
+.header-nav {
+  min-height: 9vh;
+  width: 100%;
+  background-color: #202020;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5e5e5;
+  color: #fff;
+}
+
+.header-nav .icon {
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-nav header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.header-nav header .menu .yt-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.header-nav header .menu .yt-logo .yt-icon {
+  background: white;
+  background: radial-gradient(circle, white 20%, rgba(255, 248, 250, 0) 24%);
+}
+
+.header-nav header .menu .yt-logo h1 {
+  font-size: 1.2rem;
+}
+
+.header-nav header .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-nav header .search input {
+  width: 30rem;
+  padding: 10px;
+  background-color: #121212;
+  border: 1px solid #e5e5e563;
+  border-right: none;
+  color: #e5e5e5;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.header-nav header .search input:focus {
+  outline: none;
+}
+
+.header-nav header .search button {
+  padding: 10px 20px;
+  background-color: #373737;
+  border: none;
+  cursor: pointer;
+}
+
+.header-nav header .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+/*# sourceMappingURL=main.css.map */
