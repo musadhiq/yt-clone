@@ -8,28 +8,53 @@
 body {
   font-family: $font-sans;
   font-size: 80%;
+  color: $text-color;
 }
 
 .yt-clone {
   .layout {
-    display: grid;
-    grid-template-areas:
-      "header header header header header header"
-      "sidebar  container container container container container";
     .header {
-      grid-area: header;
-      height: 10vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
     }
-    .sidebar {
-      grid-area: sidebar;
-      background-color: yellow;
-    }
-    .container {
-      grid-area: container;
+    .flex-main {
+      width: 100%;
+      margin-top: 9vh;
+      display: flex;
+      height: 91vh;
+      overflow: hidden;
+      // .sidebar-main {
+      // }
+      .container {
+        width: 100%;
+        margin-top: 3px;
+        height: 100%;
+        overflow: scroll;
+        background-color: $black;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
     }
   }
 }
-
+@media screen and (max-width: 420px) {
+  .yt-clone {
+    .layout {
+      .flex-main {
+        margin-top: 8vh;
+        height: 92vh;
+        .container {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
 @import "../components/Header/Header";
 @import "../components/Sidebar/sidebar";
 @import "../pages/Home/home";
+@import "../components/home/HomeSpotlight";
+@import "../components/homeBar/homeBar";

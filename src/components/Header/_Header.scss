@@ -3,8 +3,7 @@
   width: 100%;
   background-color: $primary-color;
   padding: 13px 0;
-  border-bottom: 1px solid #e5e5e5;
-  color: #fff;
+  color: $text-color;
   .icon {
     color: #fff;
     cursor: pointer;
@@ -36,9 +35,10 @@
     }
     .search {
       display: flex;
+      width: 50%;
       input {
-        width: 30rem;
         padding: 10px;
+        flex-grow: 2;
         background-color: $black;
         border: 1px solid #e5e5e563;
         border-right: none;
@@ -48,6 +48,7 @@
         font-size: 1rem;
         &:focus {
           outline: none;
+          border: 1px solid rgba(0, 0, 255, 0.603);
         }
       }
       button {
@@ -60,6 +61,44 @@
     .actions {
       display: flex;
       gap: 25px;
+      .search {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 528px) {
+  .header-nav {
+    min-height: 8vh;
+    header {
+      padding: 0 10px;
+      .menu {
+        h1 {
+          display: none;
+        }
+      }
+      .search {
+        display: none;
+        width: 70%;
+        input {
+          width: 70%;
+        }
+        &.open {
+          display: inline-block;
+        }
+      }
+      .actions {
+        .create,
+        .subscribe {
+          display: none;
+        }
+        .search {
+          display: inline-block;
+        }
+        &.hide {
+          display: none;
+        }
+      }
     }
   }
 }

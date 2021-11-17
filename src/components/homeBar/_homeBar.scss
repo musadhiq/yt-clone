@@ -1,0 +1,32 @@
+.top-bar {
+  height: 60px;
+  background-color: $primary-color;
+  border-bottom: 1px solid #e5e5e511;
+  border-top: 1px solid #e5e5e511;
+  .bar-items {
+    padding-left: 20px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .bar-item {
+      button.btn {
+        padding: 8px 15px;
+        border-radius: 23px;
+        background-color: #e5e5e51a;
+        border: 1px solid #e5e5e573;
+        color: $text-color;
+        &.active {
+          background-color: #fff;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
